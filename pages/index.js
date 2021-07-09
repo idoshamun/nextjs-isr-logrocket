@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,20 +16,26 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <a href="/isr" className={styles.card}>
-            <h3>ISR &rarr;</h3>
-            <p>Fetches a random public API every revalidation period</p>
-          </a>
+          <Link href="/isr">
+            <a className={styles.card}>
+              <h3>ISR &rarr;</h3>
+              <p>Fetches a random public API every revalidation period</p>
+            </a>
+          </Link>
 
-          <a href="/ssg" className={styles.card}>
-            <h3>SSG &rarr;</h3>
-            <p>Fetches a random public API at build time</p>
-          </a>
+          <Link href="/ssg">
+            <a className={styles.card}>
+              <h3>SSG &rarr;</h3>
+              <p>Fetches a random public API at build time</p>
+            </a>
+          </Link>
 
-          <a href="/ssr" className={styles.card}>
-            <h3>SSR &rarr;</h3>
-            <p>Fetches a random public API on every request</p>
-          </a>
+          <Link href="/ssr">
+            <a className={styles.card}>
+              <h3>SSR &rarr;</h3>
+              <p>Fetches a random public API on every request</p>
+            </a>
+          </Link>
         </div>
       </main>
     </div>
